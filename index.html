@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="menu-tog">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- d : 좌표기준을 좌측하단으로 이동 -->
+     <!-- non-scaling-stroke : 브라우저 확대해도 3px 유지 -->
+      <!-- M 0 100 L 0 100 100 100 : M 은 좌표를 Move L 은 Line 브라우저 하단(100)에서 좌측(0)에서 우측(100) 지점으로 선을 그림 -->
+       <!-- C 50 100 : C 는 Curve 를 그리는데 x축 중앙지점(브라우저 중앙)과 브라우저 하단(100) 위치에 그림 -->
+        <!-- L 0 100 100 100 100 100 C 50 100, 50 100, 0 100 : (0, 100) -> (100, 100) -> (50, 100) -> (0, 100) 해당 지점을 지나면서 선과 커브를 그림 -->
+    <div class="wrapper">
+        <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="path" stroke="#000" fill="#fcc42a" stroke-width="3px" vector-effect="non-scaling-stroke" d="M 0 100 L 0 100 100 100 100 100 C 50 100, 50 100, 0 100" />
+        </svg>
+
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>PROJECTS</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
